@@ -20,7 +20,7 @@ export default GMButton = (props) => {
             justifyContent: 'center'
 
         }}>
-            <Text style={{ fontWeight: '200', fontSize: 18, color: 'orange' }}>Daha Fazla</Text>
+            <Text style={{ fontWeight: '100', fontSize: 18, color: 'orange' }}>Daha Fazla</Text>
 
         </TouchableOpacity>);
 }
