@@ -4,7 +4,7 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 import GMStars from './GMStars';
 import GMMoneyDisplay from './GMMoneyDisplay';
 
-export default GMProductItem = (props) => {
+const GMProductItem = (props) => {
 
     return (<TouchableOpacity activeOpacity={.8} style={{
         backgroundColor: 'white',
@@ -33,3 +33,5 @@ GMProductItem.propTypes = {
     price: PropTypes.any,
     currencytype: PropTypes.string
 };
+
+export default GMProductItem

@@ -104,7 +104,7 @@ class MainPage extends Component {
           />
           <GMFilterModal showgmfilter={this.state.showgmfilter} showgmfilterbutton={() => this.showgmfilter()} />
           <GMSorterModal showgmsorter={this.state.showgmsorter} showgmsorterbutton={() => this.showgmsorter()} />
-          <GMCampaignHeader url={""} />
+          <GMCampaignHeader url={"http://wekan.generalmobile.com/cfs/files/attachments/G2kTBRmEzutxH8nGD/Screen%20Shot%202019-01-18%20at%2016.51.47.png?token=eyJhdXRoVG9rZW4iOiJ5TXkxNVFDbmpsbmg5anh3Z0ctQnhSZVF6Y19OQnQ5eHVadENrNDI4VEYyIn0%3D"} />
           <GMSearchBar  /* onSubmitEditing={} */ searchnumber={11}/>
 
           <FlatList

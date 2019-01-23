@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { View, Text ,TouchableOpacity} from 'react-native';
 
 
-export default GMSorterItem = (props) => {
+const GMSorterItem = (props) => {
 
     return (
         <TouchableOpacity activeOpacity={.8} onPressIn={()=> props.onpress && props.onpress()} style={{
@@ -28,3 +28,5 @@ GMSorterItem.propTypes = {
     selected: PropTypes.bool,
     onpress:PropTypes.fun
 };
+
+export default GMSorterItem

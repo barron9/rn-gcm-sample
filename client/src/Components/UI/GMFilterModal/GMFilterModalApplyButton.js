@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { View, TouchableOpacity, Text } from 'react-native';
 
 
-export default GMFilterModalApplyButton = (props) => {
+const GMFilterModalApplyButton = (props) => {
 
     return (
         <TouchableOpacity activeOpacity={.9} onPress={() => props.showgmfilterbutton()}
@@ -22,3 +22,5 @@ export default GMFilterModalApplyButton = (props) => {
 GMFilterModalApplyButton.propTypes = {
     name: PropTypes.string,showgmfilterbutton:PropTypes.func
 };
+
+export default GMFilterModalApplyButton

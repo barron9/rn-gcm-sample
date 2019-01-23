@@ -5,7 +5,7 @@ import { View, Text } from 'react-native';
 var numeral = require('numeral')
 
 
-export default GMMoneyDisplay = (props) => {
+const GMMoneyDisplay = (props) => {
     function moneydisplay(props) {
 
         return string = numeral(props.price).format('0,0[.] ' );
@@ -32,3 +32,5 @@ GMMoneyDisplay.propTypes = {
     price: PropTypes.price,
     currencytype:PropTypes.currencytype
 };
+
+export default GMMoneyDisplay

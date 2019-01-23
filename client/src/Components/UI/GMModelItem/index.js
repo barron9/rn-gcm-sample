@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 
 
-export default GMModelItem = (props) => {
+const GMModelItem = (props) => {
 
     return (<TouchableOpacity activeOpacity={.8} onPress={() => props.onPress} style={{
         width: 130, height: 130,
@@ -31,3 +31,5 @@ GMModelItem.propTypes = {
     onPress: PropTypes.func
 
 };
+
+export default GMModelItem

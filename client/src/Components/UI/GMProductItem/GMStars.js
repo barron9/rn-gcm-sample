@@ -6,7 +6,7 @@ import numeral from 'numeral';
 
 let arr = [1, 2, 3, 4, 5]
 
-export default GMStars = (props) => {
+const GMStars = (props) => {
 
     return (
         <View style={{ flexDirection: 'row', margin: 5, alignItems: 'center' }}>
@@ -25,3 +25,5 @@ GMStars.propTypes = {
     comments: PropTypes.number,
     color: PropTypes.string
 };
+
+export default GMStars

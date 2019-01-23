@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { View, TouchableOpacity, Text } from 'react-native';
 
 
-export default GMSorterModalApplyButton = (props) => {
+const GMSorterModalApplyButton = (props) => {
 
     return (
         <TouchableOpacity activeOpacity={.9} onPress={() => props.showgmsorterbutton()}
@@ -23,3 +23,5 @@ GMSorterModalApplyButton.propTypes = {
     name: PropTypes.string,
     showgmsorterbutton:PropTypes.func
 };
+
+export default GMSorterModalApplyButton

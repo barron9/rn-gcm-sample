@@ -5,7 +5,7 @@ import GMCheckbox from './GMCheckbox';
 import GMStars from './GMStars';
 
 
-export default GMFilterItem = (props) => {
+const GMFilterItem = (props) => {
 
     return (
         <TouchableOpacity activeOpacity={1} onPress={() => props.onpress && props.onpress()} style={{ flexDirection: 'row', marginBottom: 5,flex:1,borderBottomColor: '#eee', borderBottomWidth: .5, alignItems: 'center', height: 40, borderBottomColor: 'orange', borderBottomWidth: props.selected ? .5 : 0 }}>
@@ -26,3 +26,5 @@ GMFilterItem.propTypes = {
     productType: PropTypes.string,
     selected: PropTypes.bool
 };
+
+export default GMFilterItem

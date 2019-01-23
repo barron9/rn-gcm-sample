@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { View, Text, Image, TouchableOpacity, TextInput,Platform } from 'react-native';
 
 
-export default GMSearchBar = (props) => {
+const GMSearchBar = (props) => {
     return (
         <View style={{
             backgroundColor: 'white',
@@ -36,3 +36,5 @@ GMSearchBar.propTypes = {
     onSubmitEditing: PropTypes.func,
     searchnumber:PropTypes.number
 };
+
+export default GMSearchBar

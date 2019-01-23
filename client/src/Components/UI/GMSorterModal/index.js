@@ -4,7 +4,7 @@ import { View, Text, ScrollView, TouchableOpacity, Modal } from 'react-native';
 import GMSorterItem from './GMSorterItem';
 import GMSorterModalApplyButton from './GMSorterModalApplyButton';
 
-export default GMSorterModal = (props) => {
+const GMSorterModal = (props) => {
 
     return (
         <Modal visible={props.showgmsorter} transparent animated hardwareAccelerated style={{ top: 0, flex: 1, zIndex: 100, elevation: 100 }}>
@@ -37,3 +37,5 @@ GMSorterModal.propTypes = {
     name: PropTypes.string,
     showgmsorter: PropTypes.bool
 };
+
+export default GMSorterModal

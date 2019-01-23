@@ -4,7 +4,7 @@ import { View, Text, ScrollView, TouchableOpacity, Modal } from 'react-native';
 import GMSorterItem from './../UI/GMSorterModal/GMSorterItem';
 import GMSorterModalApplyButton from './../UI/GMSorterModal/GMSorterModalApplyButton';
 
-export default class GMSorterModal extends React.Component {
+ class GMSorterModal extends React.Component {
     constructor(props) {
         super(props)
         this.state = { x1: false, x2: false, x3: false, x4: false, x5: false, x6: false, x7: false }
@@ -55,3 +55,5 @@ GMSorterModal.propTypes = {
     name: PropTypes.string,
     showgmsorter: PropTypes.bool
 };
+
+export default GMSorterModal

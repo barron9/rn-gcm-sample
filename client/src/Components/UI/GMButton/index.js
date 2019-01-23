@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { View, Text, Image, TouchableOpacity, TextInput } from 'react-native';
 
 
-export default GMButton = (props) => {
+const GMButton = (props) => {
     return (
         <TouchableOpacity activeOpacity={.8} style={{
             backgroundColor: 'white',
@@ -27,3 +27,5 @@ export default GMButton = (props) => {
 GMButton.propTypes = {
     searchkey: PropTypes.string,
 };
+
+export default GMButton

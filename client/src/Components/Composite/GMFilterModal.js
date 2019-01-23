@@ -4,7 +4,7 @@ import { View, Text, ScrollView, TouchableOpacity, Modal } from 'react-native';
 import GMFilterItem from './../UI/GMFilterModal/GMFilterItem';
 import GMFilterModalApplyButton from './../UI/GMFilterModal/GMFilterModalApplyButton';
 
-export default class GMFilterModal extends React.Component {
+ class GMFilterModal extends React.Component {
     constructor(props) {
         super(props)
         this.state = { x1: true, x2: false, x3: false, x4: false, x5: true, x6: false, x7: false }
@@ -48,3 +48,5 @@ GMFilterModal.propTypes = {
     showgmfilter: PropTypes.bool,
     onItemSelected: PropTypes.any
 };
+
+export default GMFilterModal

@@ -4,7 +4,7 @@ import { View, Text, ScrollView, TouchableOpacity, Modal } from 'react-native';
 import GMFilterItem from './GMFilterItem';
 import GMFilterModalApplyButton from './GMFilterModalApplyButton';
 
-export default GMFilterModal = (props) => {
+const GMFilterModal = (props) => {
 
     return (
         <Modal visible={props.showgmfilter} transparent={true} animated hardwareAccelerated style={{ top: 0, flex: 1, zIndex: 100, elevation: 100 }}>
@@ -35,3 +35,5 @@ GMFilterModal.propTypes = {
     name: PropTypes.string,
     showgmfilter: PropTypes.bool
 };
+
+export default GMFilterModal
