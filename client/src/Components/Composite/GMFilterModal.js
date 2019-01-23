@@ -7,7 +7,7 @@ import GMFilterModalApplyButton from './../UI/GMFilterModal/GMFilterModalApplyBu
 export default GMFilterModal = (props) => {
 
     return (
-        <Modal animationType = "fade" visible={props.showgmfilter} animated hardwareAccelerated style={{ top: 0, flex: 1, zIndex: 100, elevation: 100 }}>
+        <Modal animationType = "fade" visible={props.showgmfilter} transparent animated hardwareAccelerated style={{ top: 0, flex: 1, zIndex: 100, elevation: 100 }}>
             <ScrollView style={{
                 flexDirection: 'column', backgroundColor: 'white', shadowColor: '#333',
                 height: 400, padding: 20
@@ -25,7 +25,7 @@ export default GMFilterModal = (props) => {
                 <GMFilterItem stars={1} comments={4} /* productType={"Telefon"} */ />
             </ScrollView>
             <GMFilterModalApplyButton showgmfilterbutton={() => props.showgmfilterbutton()} />
-            <TouchableOpacity style={{ backgroundColor: 'black', opacity: .5, flex: 1, height: 400 }} onPress={() => alert('setstate/close modal')} />
+            <View style={{height:100,backgroundColor:'rgba(52, 52, 52, 0.8)'}}/>
 
         </Modal>
     );

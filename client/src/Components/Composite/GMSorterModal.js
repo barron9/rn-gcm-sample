@@ -7,9 +7,9 @@ import GMSorterModalApplyButton from './../UI/GMSorterModal/GMSorterModalApplyBu
 export default GMSorterModal = (props) => {
 
     return ( 
-        <Modal animationType = "fade" visible={props.showgmsorter} animated hardwareAccelerated style={{ top: 0, flex: 1, zIndex: 100, elevation: 100 }}>
-            <ScrollView style={{
-                flexDirection: 'column', backgroundColor: 'white', shadowColor: '#333',
+        <Modal animationType = "fade" visible={props.showgmsorter} transparent animated hardwareAccelerated style={{ top: 0, flex: 1, zIndex: 100, elevation: 100,marginBottom:100 }}>
+            <ScrollView style={{backgroundColor:'white',
+                flexDirection: 'column',  shadowColor: '#333',
                 height: 400, padding: 20
             }} showsVerticalScrollIndicator={false}>
 
@@ -27,7 +27,7 @@ export default GMSorterModal = (props) => {
 
             </ScrollView>
             <GMSorterModalApplyButton showgmsorterbutton={() => props.showgmsorterbutton()} />
-            <View style={{ backgroundColor: 'black', opacity: .5, flex: 1, height: 400 }} />
+            <View style={{height:100,backgroundColor:'rgba(52, 52, 52, 0.8)'}}/>
 
         </Modal>
     );

@@ -119,7 +119,7 @@ class MainPage extends Component {
             />
             }
           />
-
+<Text style={{color:'#ccc',fontSize:20,textAlign:'left',margin:10}}>Aksesuarlar</Text>
           <FlatList
             numColumns={2}
             style={{ flex: 1 }}
