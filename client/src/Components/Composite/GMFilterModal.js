@@ -13,6 +13,10 @@ export default class GMFilterModal extends React.Component {
         this.setState({
             [x]: !this.state[x],
         })
+
+    }
+    onItemSelected(){
+        
     }
     render() {
         return (
@@ -41,5 +45,6 @@ export default class GMFilterModal extends React.Component {
 }
 GMFilterModal.propTypes = {
     name: PropTypes.string,
-    showgmfilter: PropTypes.bool
+    showgmfilter: PropTypes.bool,
+    onItemSelected: PropTypes.any
 };

@@ -8,8 +8,8 @@ import GMStars from './GMStars';
 export default GMFilterItem = (props) => {
 
     return (
-        <TouchableOpacity activeOpacity={1} onPress={() => props.onpress && props.onpress()} style={{ flexDirection: 'row', marginBottom: 5, borderBottomColor: '#eee', borderBottomWidth: .5, alignItems: 'center', height: 40, borderBottomColor: 'orange', borderBottomWidth: props.selected ? .5 : 0 }}>
-            <GMCheckbox selected={!props.selected} onpress={() => props.onpress && props.onpress()} />
+        <TouchableOpacity activeOpacity={1} onPress={() => props.onpress && props.onpress()} style={{ flexDirection: 'row', marginBottom: 5,flex:1,borderBottomColor: '#eee', borderBottomWidth: .5, alignItems: 'center', height: 40, borderBottomColor: 'orange', borderBottomWidth: props.selected ? .5 : 0 }}>
+            <GMCheckbox selected={!props.selected} onpress={() => props.onpress && props.onpress()}/>
             {(props.stars > 0 && props.comments) ?
                 <GMStars stars={props.stars} color="orange" comments={props.comments} />
                 :

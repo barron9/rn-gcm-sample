@@ -1,7 +1,7 @@
 import FoundationIcon from 'react-native-vector-icons/MaterialIcons';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Text, Image, TouchableOpacity, TextInput } from 'react-native';
+import { View, Text, Image, TouchableOpacity, TextInput,Platform } from 'react-native';
 
 
 export default GMSearchBar = (props) => {
@@ -22,10 +22,10 @@ export default GMSearchBar = (props) => {
 
         }}>
             <FoundationIcon name="search" size={30} color={"orange"} style={{ marginLeft: 15, fontWeight: '100' }} />
-                <TextInput style={{ flex: 1, fontSize: 18,  paddingLeft: 7 ,marginTop:10}} placeholder="Aranacak kelime giriniz... " onSubmitEditing={() => props.onSubmitEditing}
+                <TextInput style={{ flex: 1, fontSize: 18,  paddingLeft: 7 ,marginTop:Platform.OS=='ios'?0:10}} placeholder="Aranacak kelime giriniz... " onSubmitEditing={() => props.onSubmitEditing}
                 />
             <View style={{ backgroundColor: '#eee', borderRadius: 15, paddingTop: 2, paddingBottom: 2, paddingLeft: 15, paddingRight: 15, marginTop: 1, marginBottom: 1, marginRight: 10, alignItems: 'center', justifyContent: 'center' }}>
-                <Text style={{ color: 'black', fontWeight: '200', fontSize: 19 }}>53</Text>
+                <Text style={{ color: 'black', fontWeight: '200', fontSize: 19 }}>{props.searchnumber}</Text>
             </View>
 
         </View>);
@@ -33,5 +33,6 @@ export default GMSearchBar = (props) => {
 
 GMSearchBar.propTypes = {
     searchkey: PropTypes.string,
-    onSubmitEditing: PropTypes.func
+    onSubmitEditing: PropTypes.func,
+    searchnumber:PropTypes.number
 };
