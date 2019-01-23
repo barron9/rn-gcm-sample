@@ -1,4 +1,4 @@
-import FoundationIcon from 'react-native-vector-icons/Foundation';
+import FoundationIcon from 'react-native-vector-icons/MaterialIcons';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View, Text, Image, TouchableOpacity, TextInput } from 'react-native';
@@ -18,11 +18,12 @@ export default GMSearchBar = (props) => {
             justifyContent: 'space-between'
 
         }}>
-            <FoundationIcon name="magnifying-glass" size={20} color={"orange"} style={{ marginLeft: 15 }} />
-            <TextInput style={{ flex: 1, fontSize: 20,marginTop:7,paddingLeft:7 }} placeholder="Arama " onSubmitEditing={()=>props.onSubmitEditing}
-            />
-            <View style={{ backgroundColor: '#eee', borderRadius: 8, paddingTop:5,paddingBottom:5,paddingLeft: 10,paddingRight:10, marginTop: 5,marginBottom:5,marginRight:10, alignItems: 'center', justifyContent: 'center' }}>
-                <Text style={{ color: 'black', fontWeight: 'bold' }}>12</Text>
+            <FoundationIcon name="search" size={30} color={"orange"} style={{ marginLeft: 15, fontWeight: '100' }} />
+            <View style={{ flex: 1,justifyContent:'center'}}>
+                <TextInput style={{ flex: 1, fontSize: 18, marginTop: 10, paddingLeft: 7 }} placeholder="Aranacak kelime giriniz... " onSubmitEditing={() => props.onSubmitEditing}
+                /></View>
+            <View style={{ backgroundColor: '#eee', borderRadius: 15, paddingTop: 2, paddingBottom: 2, paddingLeft: 15, paddingRight: 15, marginTop: 1, marginBottom: 1, marginRight: 10, alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ color: 'black', fontWeight: '200', fontSize: 19 }}>53</Text>
             </View>
 
         </View>);
@@ -30,5 +31,5 @@ export default GMSearchBar = (props) => {
 
 GMSearchBar.propTypes = {
     searchkey: PropTypes.string,
-    onSubmitEditing:PropTypes.func
+    onSubmitEditing: PropTypes.func
 };

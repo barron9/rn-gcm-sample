@@ -7,13 +7,13 @@ export default GMModelItem = (props) => {
 
     return (<TouchableOpacity activeOpacity={.8} onPress={() => props.onPress} style={{
         width: 130, height: 130,
-        padding: 10,
         backgroundColor: 'white',
-        padding: 5,
+        padding: 7,
         margin: 3, alignItems: 'center', justifyContent: 'center',
-        flex: 1, elevation: 1, shadowOffset: { width: 1, height: 1, },
+        flex: 1, elevation: 2, 
+        shadowOffset: { width: 2, height: 2, },
         shadowColor: 'gray',
-        shadowOpacity: .3,
+        shadowOpacity: 1,
         borderRadius: 5,
 
     }}>
