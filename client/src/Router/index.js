@@ -42,6 +42,9 @@ const BottomN = createBottomTabNavigator({
         inactiveColor: '#888',
         tabBarOptions: {
             elevation: 4,
+            shadowOffset: { width: 1, height: 1, },
+            shadowColor: 'black',
+            shadowOpacity: 2,
             activeTintColor: 'white',
             showLabel: true, // hide labels
             activeTintColor: 'orange', // active icon color
@@ -51,7 +54,7 @@ const BottomN = createBottomTabNavigator({
                 borderTopWidth:5,borderTopColor:'#f48924',
                 shadowOffset: { width: 1, height: 1, },
                 shadowColor: 'black',
-                shadowOpacity: 2,
+                shadowOpacity: 1,
                 backgroundColor: '#eee' // TabBar background
             }
         }

@@ -13,23 +13,17 @@ export default class GMFilterModal extends React.Component {
         this.setState({
             [x]: !this.state[x],
         })
-
-      
     }
-
     render() {
         return (
             <Modal animationType="fade" visible={this.props.showgmfilter} transparent animated hardwareAccelerated style={{ top: 0, flex: 1, zIndex: 100, elevation: 100 }}>
-
-
                 <ScrollView style={{
                     flexDirection: 'column', backgroundColor: 'white', shadowColor: '#333',
                     height: 400, padding: 20, flex: 1
                 }} showsVerticalScrollIndicator={false}>
                     <Text style={{ fontWeight: '100', color: '#ccc', marginBottom: 20, fontSize: 18 }} numberOfLines={2}>
                         Filtre uygulayarak istediğiniz ürüne daha hızlı ulaşabilirsiniz.
-            </Text>
-
+                    </Text>
                     <GMFilterItem /* stars={5} comments={20} */ productType={"Telefon"} selected={this.state.x1} onpress={() => this.selectfun('x1')} />
                     <GMFilterItem /* stars={5} comments={20} */ productType={"Aksesuar"} selected={this.state.x2} onpress={() => this.selectfun('x2')} />
                     <GMFilterItem stars={5} comments={100} /* productType={"Telefon"} */ selected={this.state.x3} onpress={() => this.selectfun('x3')} />
@@ -40,7 +34,6 @@ export default class GMFilterModal extends React.Component {
                 </ScrollView>
                 <GMFilterModalApplyButton showgmfilterbutton={() => this.props.showgmfilterbutton()} />
                 <View style={{ flex: 1, backgroundColor: 'rgba(52, 52, 52, 0.8)' }} />
-
             </Modal>
         );
 

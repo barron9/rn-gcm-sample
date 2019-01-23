@@ -104,8 +104,9 @@ class MainPage extends Component {
           />
           <GMFilterModal showgmfilter={this.state.showgmfilter} showgmfilterbutton={() => this.showgmfilter()} />
           <GMSorterModal showgmsorter={this.state.showgmsorter} showgmsorterbutton={() => this.showgmsorter()} />
-          <GMSearchBar  /* onSubmitEditing={} */ />
           <GMCampaignHeader url={""} />
+          <GMSearchBar  /* onSubmitEditing={} */ />
+
           <FlatList
             showsHorizontalScrollIndicator={false}
             horizontal
