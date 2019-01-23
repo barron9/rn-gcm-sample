@@ -9,11 +9,11 @@ export default GMSorterModalApplyButton = (props) => {
         <TouchableOpacity activeOpacity={.9} onPress={() => props.showgmsorterbutton()}
             style={{
                 justifyContent: 'center', alignItems: 'center',
-                borderTopColor: '#eee', borderTopWidth: .5, height: 60, backgroundColor: 'orange', borderRadius: 1
+                borderTopColor: '#eee', borderTopWidth: .5, height: 60, backgroundColor: 'white', borderRadius: 1
             }} >
 
             <View >
-                <Text style={{ color: 'white', fontSize: 18 }}>Uygula</Text></View>
+                <Text style={{ color: '#ccc', fontSize: 18 }}>Uygula</Text></View>
 
         </TouchableOpacity>
     );
