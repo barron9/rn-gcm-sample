@@ -1,4 +1,3 @@
-import FoundationIcon from 'react-native-vector-icons/Foundation';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View, Text, Image, TouchableOpacity, TextInput } from 'react-native';

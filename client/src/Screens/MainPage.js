@@ -85,8 +85,8 @@ class MainPage extends Component {
           backgroundColor="#f5f5f5"
           barStyle="dark-content"
         />
-        <View style={{ height: Platform.OS == 'ios' ? getStatusBarHeight() : 0, backgroundColor: '#f5f5f5' }} />
-        <Appbar style={{ backgroundColor: '#eeeeee', justifyContent: 'space-between' }}>
+        <View style={{ height: Platform.OS == 'ios' ? getStatusBarHeight() : 0,  }} />
+        <Appbar style={{ backgroundColor: '#eeeeee', justifyContent: 'space-between',elevation:2 }}>
 
           <Text style={{ marginLeft: 20, fontSize: 20, fontWeight: 'bold', color: 'black' }}>General Mobile</Text>
           <Appbar.Action icon="shopping-cart" onPress={() => console.log('Pressed mail')} />
@@ -94,7 +94,7 @@ class MainPage extends Component {
         </Appbar>
 
 
-        <ScrollView showsVerticalScrollIndicator={false}>
+        <ScrollView showsVerticalScrollIndicator={false} style={{backgroundColor:'#eee'}}>
 
           <StatusBar
             translucent={false}
@@ -109,7 +109,7 @@ class MainPage extends Component {
           <FlatList
             showsHorizontalScrollIndicator={false}
             horizontal
-            style={{ flex: 1, marginBottom: 10, marginTop: 10 }}
+            style={{ flex: 1, marginBottom: 10, marginTop: 10 ,backgroundColor:undefined}}
             data={[{ key: 'a' }, { key: 'b' }, { key: 'a' }, { key: 'b' }, { key: 'a' }, { key: 'b' }]}
             renderItem={({ item }) => <GMModelItem
               /*onPress={}*/
@@ -176,7 +176,7 @@ const mapDispatchToProps = dispatch => {
 const styles = StyleSheet.create({
   container: {
     paddingBottom: Platform.OS == 'ios' ? getBottomSpace() : 0,
-    backgroundColor: 'white',
+    //backgroundColor: 'white',
     //padding: 0,
     flex: 1,
   },
