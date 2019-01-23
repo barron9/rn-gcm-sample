@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Text } from 'react-native';
+import { View, Text ,TouchableOpacity} from 'react-native';
 
 
-export default GMFilterItem = (props) => {
+export default GMSorterItem = (props) => {
 
     return (
-        <View style={{
+        <TouchableOpacity activeOpacity={.8} onPressIn={()=> props.onpress && props.onpress()} style={{
             flexDirection: 'row', marginBottom: 5, borderBottomColor: '#eee', borderBottomWidth: .5, alignItems: 'center', height: 65,
             borderBottomColor: props.selected ? 'orange' : 'gray',
             borderBottomWidth: props.selected ? .5 : 0,
@@ -17,13 +17,14 @@ export default GMFilterItem = (props) => {
             <Text style={{ color: props.selected ? 'orange' : 'gray', fontSize: 16, fontWeight: props.selected ? 'bold' : '100' }}>{props.productType}</Text>
 
 
-        </View>
+        </TouchableOpacity>
     );
 
 }
-GMFilterItem.propTypes = {
+GMSorterItem.propTypes = {
     //stars: PropTypes.number,
     //comments: PropTypes.number,
     productType: PropTypes.string,
-    selected: PropTypes.bool
+    selected: PropTypes.bool,
+    onpress:PropTypes.fun
 };
