@@ -15,6 +15,7 @@ import GMProductItem from './../Components/UI/GMProductItem'
 import GMSearchBar from './../Components/UI/GMSearchBar'
 import GMButton from './../Components/UI/GMButton'
 import GMModelItem from './../Components/UI/GMModelItem'
+import GMFilterAndSorterMenu from './../Components/UI/GMFilterAndSorterMenu'
 
 //import { addPlace } from './place';
 //import { listRepos } from './reducer';
@@ -106,7 +107,7 @@ class MainPage extends Component {
           <GMSorterModal showgmsorter={this.state.showgmsorter} showgmsorterbutton={() => this.showgmsorter()} />
           <GMCampaignHeader url={"http://wekan.generalmobile.com/cfs/files/attachments/G2kTBRmEzutxH8nGD/Screen%20Shot%202019-01-18%20at%2016.51.47.png?token=eyJhdXRoVG9rZW4iOiJ5TXkxNVFDbmpsbmg5anh3Z0ctQnhSZVF6Y19OQnQ5eHVadENrNDI4VEYyIn0%3D"} />
           <GMSearchBar  /* onSubmitEditing={} */ searchnumber={11}/>
-
+          <GMFilterAndSorterMenu/>
           <FlatList
             showsHorizontalScrollIndicator={false}
             horizontal
