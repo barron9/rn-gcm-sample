@@ -7,7 +7,7 @@ export default GMSorterItem = (props) => {
 
     return (
         <TouchableOpacity activeOpacity={.8} onPressIn={()=> props.onpress && props.onpress()} style={{
-            flexDirection: 'row', marginBottom: 5, borderBottomColor: '#eee', borderBottomWidth: .5, alignItems: 'center', height: 65,
+            flexDirection: 'row', marginBottom: 5, borderBottomColor: '#eee', borderBottomWidth: .5, alignItems: 'center', height: 40,
             borderBottomColor: props.selected ? 'orange' : 'gray',
             borderBottomWidth: props.selected ? .5 : 0,
             borderTopColor: props.selected ? 'orange' : 'gray',

@@ -8,7 +8,7 @@ export default GMCheckbox = (props) => {
 
 
     return (
-        <TouchableOpacity onPress={()=>props.onpress && props.onpress()} activeOpacity={1}
+        <TouchableOpacity onPress={() => props.onpress && props.onpress()} activeOpacity={1}
             style={{ flexDirection: 'row', margin: 5, alignItems: 'center', justifyContent: 'center', width: 30, height: 30, borderRadius: 5, borderColor: 'gray', borderWidth: .5 }}>
             {!props.selected && <FoundationIcon name="check" size={20} color="orange" />}
         </TouchableOpacity>
@@ -20,5 +20,5 @@ export default GMCheckbox = (props) => {
 GMCheckbox.propTypes = {
     name: PropTypes.string,
     selected: PropTypes.bool,
-    onpress:PropTypes.fun
+    onpress: PropTypes.fun
 };
