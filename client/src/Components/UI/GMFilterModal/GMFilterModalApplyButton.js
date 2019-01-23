@@ -8,11 +8,10 @@ const GMFilterModalApplyButton = (props) => {
     return (
         <TouchableOpacity activeOpacity={.9} onPress={() => props.showgmfilterbutton()}
             style={{
-                justifyContent: 'center',  alignItems: 'center',
+                justifyContent: 'center', alignItems: 'center',
                 borderTopColor: '#eee', borderTopWidth: .5, height: 60, backgroundColor: 'white', borderRadius: 1
             }} >
-
-            <View >
+            <View>
                 <Text style={{ color: '#ccc', fontSize: 18 }}>Uygula</Text></View>
 
         </TouchableOpacity>
@@ -20,7 +19,7 @@ const GMFilterModalApplyButton = (props) => {
 
 }
 GMFilterModalApplyButton.propTypes = {
-    name: PropTypes.string,showgmfilterbutton:PropTypes.func
+    name: PropTypes.string, showgmfilterbutton: PropTypes.func
 };
 
 export default GMFilterModalApplyButton
