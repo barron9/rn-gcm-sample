@@ -126,7 +126,7 @@ class MainPage extends Component {
             data={[{ key: 'a' }, { key: 'b' }, { key: 'a' }, { key: 'b' }, { key: 'a' }, { key: 'b' }]}
             renderItem={({ item }) => <GMProductItem
               stars={Math.floor(Math.random() * (5 - 3 + 3)) + 3}
-              productname="GM Turbo Şarj Adaptörü (GM5 ve sonrası için)"
+              productname="GM Turbo "
               comments={Math.floor(Math.random() * (9999 - 300 + 1)) + 300}
               url={'http://wekan.generalmobile.com/cfs/files/attachments/o2MTXG2auww7KCn3Q/Screen%20Shot%202019-01-18%20at%2016.41.51.png?token=eyJhdXRoVG9rZW4iOiJ5TXkxNVFDbmpsbmg5anh3Z0ctQnhSZVF6Y19OQnQ5eHVadENrNDI4VEYyIn0%3D'}
               price={Math.floor(Math.random() * (999 - 200 + 200)) + 200}
