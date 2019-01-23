@@ -14,20 +14,7 @@ export default class GMFilterModal extends React.Component {
             [x]: !this.state[x],
         })
 
-        let data = ['x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7']
-        for (let i = 0; i < data.length; i++) {
-            if (x == data[i]) {
-
-                this.setState({
-                    x: !this.state[x],
-                })
-            } else {
-                this.setState({
-                    [data[i]]: false
-                })
-            }
-
-        }
+      
     }
 
     render() {
