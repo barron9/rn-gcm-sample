@@ -9,7 +9,7 @@ const GMCheckbox = (props) => {
 
     return (
         <TouchableOpacity onPress={() => props.onpress && props.onpress()} activeOpacity={1}
-            style={{ flexDirection: 'row', margin: 5, alignItems: 'center', justifyContent: 'center', width: 30, height: 30, borderRadius: 5, borderColor: 'gray', borderWidth: .5 }}>
+            style={{ flexDirection: 'row', margin: 5, alignItems: 'center', justifyContent: 'center', width: 30, height: 30, borderRadius: 5, borderColor: !props.selected ? 'orange':'gray', borderWidth: .5 }}>
             {!props.selected && ficon}
         </TouchableOpacity>
     );
