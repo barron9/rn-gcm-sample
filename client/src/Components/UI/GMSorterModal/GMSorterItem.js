@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Text ,TouchableOpacity} from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 
 
 const GMSorterItem = (props) => {
 
     return (
-        <TouchableOpacity activeOpacity={.8} onPressIn={()=> props.onpress && props.onpress()} style={{
+        <TouchableOpacity activeOpacity={.8} onPressIn={() => props.onpress && props.onpress()} style={{
             flexDirection: 'row', marginBottom: 5, borderBottomColor: '#eee', borderBottomWidth: .5, alignItems: 'center', height: 40,
             borderBottomColor: props.selected ? 'orange' : 'gray',
             borderBottomWidth: props.selected ? .5 : 0,
@@ -26,7 +26,7 @@ GMSorterItem.propTypes = {
     //comments: PropTypes.number,
     productType: PropTypes.string,
     selected: PropTypes.bool,
-    onpress:PropTypes.fun
+    onpress: PropTypes.fun
 };
 
 export default GMSorterItem
