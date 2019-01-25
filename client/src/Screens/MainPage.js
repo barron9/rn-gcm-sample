@@ -16,7 +16,7 @@ import GMSearchBar from './../Components/UI/GMSearchBar'
 import GMButton from './../Components/UI/GMButton'
 import GMModelItem from './../Components/UI/GMModelItem'
 import GMFilterAndSorterMenu from './../Components/UI/GMFilterAndSorterMenu'
-
+import GMProductListItem from './../Components/Composite/ProductListItem/index';
 //import { addPlace } from './place';
 //import { listRepos } from './reducer';
 class MainPage extends Component {
@@ -86,8 +86,8 @@ class MainPage extends Component {
           backgroundColor="#f5f5f5"
           barStyle="dark-content"
         />
-        <View style={{ height: Platform.OS == 'ios' ? getStatusBarHeight() : 0,  }} />
-        <Appbar style={{ backgroundColor: '#eeeeee', justifyContent: 'space-between',elevation:2 }}>
+        <View style={{ height: Platform.OS == 'ios' ? getStatusBarHeight() : 0, }} />
+        <Appbar style={{ backgroundColor: '#eeeeee', justifyContent: 'space-between', elevation: 2 }}>
 
           <Text style={{ marginLeft: 20, fontSize: 20, fontWeight: 'bold', color: 'black' }}>General Mobile</Text>
           <Appbar.Action icon="shopping-cart" onPress={() => console.log('Pressed mail')} />
@@ -95,7 +95,7 @@ class MainPage extends Component {
         </Appbar>
 
 
-        <ScrollView showsVerticalScrollIndicator={false} style={{backgroundColor:'#eee'}}>
+        <ScrollView showsVerticalScrollIndicator={false} style={{ backgroundColor: '#eee' }}>
 
           <StatusBar
             translucent={false}
@@ -106,12 +106,15 @@ class MainPage extends Component {
           <GMFilterModal showgmfilter={this.state.showgmfilter} showgmfilterbutton={() => this.showgmfilter()} />
           <GMSorterModal showgmsorter={this.state.showgmsorter} showgmsorterbutton={() => this.showgmsorter()} />
           <GMCampaignHeader url={"http://wekan.generalmobile.com/cfs/files/attachments/G2kTBRmEzutxH8nGD/Screen%20Shot%202019-01-18%20at%2016.51.47.png?token=eyJhdXRoVG9rZW4iOiJ5TXkxNVFDbmpsbmg5anh3Z0ctQnhSZVF6Y19OQnQ5eHVadENrNDI4VEYyIn0%3D"} />
-          <GMSearchBar  /* onSubmitEditing={} */ searchnumber={11}/>
-          <GMFilterAndSorterMenu/>
+          <GMSearchBar  /* onSubmitEditing={} */ searchnumber={11} />
+          <GMFilterAndSorterMenu />
+          <GMProductListItem price={5000} url={'https://smsoptimizedimages.azureedge.net/0015477_samsung-leri-duzey-anc-kablolu-kulaklik-bordo_550.jpeg'} productname="kulaklık"></GMProductListItem>
+          <GMProductListItem price={5000} url={'https://smsoptimizedimages.azureedge.net/0015477_samsung-leri-duzey-anc-kablolu-kulaklik-bordo_550.jpeg'} productname="kulaklık"></GMProductListItem>
+          <GMProductListItem price={5000} url={'https://smsoptimizedimages.azureedge.net/0015477_samsung-leri-duzey-anc-kablolu-kulaklik-bordo_550.jpeg'} productname="kulaklık"></GMProductListItem>
           <FlatList
             showsHorizontalScrollIndicator={false}
             horizontal
-            style={{ flex: 1, marginBottom: 10, marginTop: 10 ,backgroundColor:undefined}}
+            style={{ flex: 1, marginBottom: 10, marginTop: 10, backgroundColor: undefined }}
             data={[{ key: 'a' }, { key: 'b' }, { key: 'a' }, { key: 'b' }, { key: 'a' }, { key: 'b' }]}
             renderItem={({ item }) => <GMModelItem
               /*onPress={}*/
@@ -121,7 +124,7 @@ class MainPage extends Component {
             />
             }
           />
-<Text style={{color:'#ccc',fontSize:20,textAlign:'left',margin:10}}>Aksesuarlar</Text>
+          <Text style={{ color: '#ccc', fontSize: 20, textAlign: 'left', margin: 10 }}>Aksesuarlar</Text>
           <FlatList
             numColumns={2}
             style={{ flex: 1 }}

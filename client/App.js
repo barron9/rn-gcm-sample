@@ -10,7 +10,7 @@ import GMProductItem from './src/Components/UI/GMProductItem'
 import GMSearchBar from './src/Components/UI/GMSearchBar'
 import GMMoreComponent from './src/Components/UI/GMMoreComponent'
 import GMModelItem from './src/Components/UI/GMModelItem'
-
+import GMProductListItem from './src/Components/Composite/ProductListItem/index';
 //import { listRepos } from './reducer';
 console.disableYellowBox = true;
 
@@ -65,6 +65,8 @@ export default class App extends Component {
                 <GMSorterModal showgmsorter={this.state.showgmsorter} showgmsorterbutton={() => this.showgmsorter()} />
                 <GMSearchBar  /* onSubmitEditing={} */ />
                 <GMCampaignHeader url={""} />
+
+
                 <FlatList
                     showsHorizontalScrollIndicator={false}
                     horizontal
