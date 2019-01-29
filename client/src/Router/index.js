@@ -15,9 +15,21 @@ import Support from '../Screens/Support';
 import placeReducer from './../Reducers/';
 import { root } from './../Saga/'
 
+import FCM, { FCMEvent, NotificationActionType } from "react-native-fcm";
+import { registerKilledListener, registerAppListener } from "./Listeners";
 
+import { AsyncStorage } from 'react-native'
 console.disableYellowBox = true;
+FCM.getFCMToken().then(token => {
+    console.log("TOKEN (getFCMToken)", token);
+    alert(JSON.stringify(token))
+    // this.setState({ token: token || "" });
+});
 
+FCM.on(FCMEvent.Notification, notif => {
+    console.log("Notification", notif);
+    alert(JSON.stringify(notif))
+})
 const sagaMiddleware = createSagaMiddleware()
 
 const rootReducer = combineReducers({
@@ -51,7 +63,7 @@ const BottomN = createBottomTabNavigator({
             inactiveTintColor: '#586589',  // inactive icon color
             style: {
                 elevation: 4,
-                borderTopWidth:5,borderTopColor:'#f48924',
+                borderTopWidth: 5, borderTopColor: '#f48924',
                 shadowOffset: { width: 1, height: 1, },
                 shadowColor: 'black',
                 shadowOpacity: 1,
@@ -60,7 +72,7 @@ const BottomN = createBottomTabNavigator({
         }
     });
 const AppNavigator = createStackNavigator({
-   // LanguageSelector: { screen: LanguageSelector },
+    // LanguageSelector: { screen: LanguageSelector },
     Login: { screen: Login },
     Home: { screen: BottomN },
 
@@ -77,9 +89,29 @@ const AppNavigator = createStackNavigator({
     });
 const AppContainer = createAppContainer(AppNavigator);
 
-export default RNRedux = () => (
-    <Provider store={store}>
-        <AppContainer />
-    </Provider>
-)
+
+export default class RNRedux extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+
+
+    async componentDidMount() {
+        // registerAppListener(this.props.navigation);
+
+    }
+
+    //1
+
+    render() {
+
+        return (
+            <Provider store={store}>
+                <AppContainer />
+            </Provider>
+
+        )
+    }
+
+}
 

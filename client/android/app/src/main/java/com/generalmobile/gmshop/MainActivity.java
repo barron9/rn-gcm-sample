@@ -1,8 +1,12 @@
-package com.client;
+package com.generalmobile.gmshop;
+
+import android.content.Intent;
 
 import com.facebook.react.ReactActivity;
 
 public class MainActivity extends ReactActivity {
+
+
 
     /**
      * Returns the name of the main component registered from JavaScript.
@@ -10,6 +14,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "client";
+        return "GMShop";
     }
 }
