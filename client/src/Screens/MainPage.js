@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { TextInput, Title, Checkbox, Chip, Appbar, Surface, Divider, FAB } from 'react-native-paper';
 import Ionicons from 'react-native-vector-icons/Foundation';
-import { View, Text, StyleSheet, StatusBar, FlatList, Button, ScrollView, Platform } from 'react-native';
+import { View, Text, StyleSheet, StatusBar, FlatList, Button, ScrollView, Platform, Dimensions } from 'react-native';
 import { ifIphoneX, getStatusBarHeight, getBottomSpace } from 'react-native-iphone-x-helper'
 
 //import { connect } from 'react-redux';
@@ -17,6 +17,15 @@ import GMButton from './../Components/UI/GMButton'
 import GMModelItem from './../Components/UI/GMModelItem'
 import GMFilterAndSorterMenu from './../Components/UI/GMFilterAndSorterMenu'
 import GMProductListItem from './../Components/Composite/ProductListItem/index';
+import GMProductInfo from './../Components/UI/GMProductInfo'
+
+import AccessoryInfoComponent from './../Components/UI/AccessoryInfoComponent'
+import GMDiscount from '../Components/UI/AccessoryInfoComponent/GMDiscount';
+const collapsableComponent = (
+  <View style={{ height: 700, backgroundColor: 'red', width: Dimensions.get('window').width, alignItems: 'center', justifyContent: 'center' }}>
+    <Text style={{ fontSize: 50, color: '#88888855', fontWeight: 'bold' }}>ÜRÜN DETAY</Text>
+  </View>
+);
 //import { addPlace } from './place';
 //import { listRepos } from './reducer';
 class MainPage extends Component {
@@ -76,9 +85,21 @@ class MainPage extends Component {
     //alert(JSON.stringify(this.props))
     //this.props.navigation.navigate('LanguageSelector')
   }
+  render1() {
+    return (
+
+      <View style={styles.container}>
+        <GMProductInfo />
+
+      </View>
+
+    )
+  }
   render() {
     const { repos } = this.props;
     return (
+
+
       <View style={styles.container}>
         <StatusBar
           translucent={false}
@@ -105,6 +126,7 @@ class MainPage extends Component {
           />
           <GMFilterModal showgmfilter={this.state.showgmfilter} showgmfilterbutton={() => this.showgmfilter()} />
           <GMSorterModal showgmsorter={this.state.showgmsorter} showgmsorterbutton={() => this.showgmsorter()} />
+          <AccessoryInfoComponent />
           <GMCampaignHeader url={"http://wekan.generalmobile.com/cfs/files/attachments/G2kTBRmEzutxH8nGD/Screen%20Shot%202019-01-18%20at%2016.51.47.png?token=eyJhdXRoVG9rZW4iOiJ5TXkxNVFDbmpsbmg5anh3Z0ctQnhSZVF6Y19OQnQ5eHVadENrNDI4VEYyIn0%3D"} />
           <GMSearchBar  /* onSubmitEditing={} */ searchnumber={11} />
           <GMFilterAndSorterMenu />
@@ -143,6 +165,7 @@ class MainPage extends Component {
             title="show / hide GMFilterModal"
           />
 
+
           <Button onPress={() => this.showgmsorter()} style={{ margin: 10 }}
             title="show / hide GMSorterModal"
 
@@ -151,6 +174,7 @@ class MainPage extends Component {
 
 
         </ScrollView>
+
       </View>
     );
   }

@@ -8,13 +8,13 @@ import Ionicons from 'react-native-vector-icons/Foundation';
 //import { listRepos } from './reducer';
 class Support extends Component {
   static navigationOptions = {
-    title: 'Destek',
+    title: 'Aksesuarlar',
     headerMode: 'none',
     header: {
       visible: false,
     },
     tabBarIcon: ({tintColor }) => (
-      <Ionicons name="wrench" size={24} color={tintColor}/>
+      <Ionicons name="headphones" size={24} color={tintColor}/>
     )
   };
   state = {}

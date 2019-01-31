@@ -9,7 +9,7 @@ import MainPage from '../Screens/MainPage';
 import Products from '../Screens/Products';
 import Profile from '../Screens/Profile';
 import Star from '../Screens/Star';
-
+import GMProductInfo from '../Components/UI/GMProductInfo'
 import Support from '../Screens/Support';
 
 import placeReducer from './../Reducers/';
@@ -43,7 +43,7 @@ sagaMiddleware.run(root)
 const BottomN = createBottomTabNavigator({
     Home: { screen: MainPage, },
     Products: { screen: Products },
-    Star: { screen: Star },
+   // Star: { screen: Star },
     Support: { screen: Support },
     Profile: { screen: Profile },
 
@@ -60,20 +60,22 @@ const BottomN = createBottomTabNavigator({
             activeTintColor: 'white',
             showLabel: true, // hide labels
             activeTintColor: 'orange', // active icon color
-            inactiveTintColor: '#586589',  // inactive icon color
+            inactiveTintColor: '#333',  // inactive icon color
             style: {
                 elevation: 4,
-                borderTopWidth: 5, borderTopColor: '#f48924',
+                borderTopWidth: .6, borderTopColor: '#ccc',
                 shadowOffset: { width: 1, height: 1, },
                 shadowColor: 'black',
                 shadowOpacity: 1,
-                backgroundColor: '#eee' // TabBar background
+                backgroundColor: '#f5f5f5' // TabBar background
             }
         }
     });
 const AppNavigator = createStackNavigator({
     // LanguageSelector: { screen: LanguageSelector },
-    Login: { screen: Login },
+   // GMP:{screen: GMProductInfo},
+
+   // Login: { screen: Login },
     Home: { screen: BottomN },
 
 

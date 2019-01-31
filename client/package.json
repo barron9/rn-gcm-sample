@@ -16,11 +16,15 @@
     "react-native-gesture-handler": "^1.0.12",
     "react-native-iphone-x-helper": "^1.2.0",
     "react-native-paper": "^2.5.0",
+    "react-native-render-html": "^3.10.0",
+    "react-native-swiper": "^1.5.14",
+    "react-native-tab-view": "0.0.74",
     "react-native-vector-icons": "^6.2.0",
     "react-navigation": "^3.0.9",
     "react-redux": "^6.0.0",
     "redux": "^4.0.1",
     "redux-saga": "^1.0.0",
+    "rn-collapsing-tab-bar": "^0.1.4",
     "save": "^2.3.3"
   },
   "devDependencies": {
